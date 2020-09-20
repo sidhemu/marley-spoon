@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import RecipeContext from "@components/RecipeContext";
 export default function MyApp({ Component, pageProps }) {
   const [recipeDetails, updateRecipeDetails] = useState({});
-  const updateData = (data) => {
+  const updateData = (data: any) => {
     updateRecipeDetails(data);
   };
   return (
