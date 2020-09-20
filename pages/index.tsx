@@ -18,12 +18,12 @@ const Main: React.FC<any> = ({ recipes, updateData }) => {
     router.push({ pathname: `/${recipeObj.recipeId}` });
   };
   return (
-    <div>
+    <main>
       <CardConatiner
         recipes={recipes}
         navigateToRecipePage={navigateToRecipePage}
       />
-    </div>
+    </main>
   );
 };
 

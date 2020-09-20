@@ -1,6 +1,7 @@
 import marked from "marked";
 import Link from "next/link";
 import cx from "classnames";
+import { ArrowBackRounded } from "@material-ui/icons";
 import styles from "./RecipeDetails.module.css";
 interface Recipe {
   recipeId: number;
@@ -24,6 +25,7 @@ const RecipeDetails: React.FC<Props> = ({ details }) => {
     <div className={styles.main}>
       <Link href="/">
         <a className={styles.goBack_btn}>
+          <ArrowBackRounded fontSize="inherit" />
           <span>Go back</span>
         </a>
       </Link>
