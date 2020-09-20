@@ -3,6 +3,7 @@ import Link from "next/link";
 import cx from "classnames";
 import { ArrowBackRounded } from "@material-ui/icons";
 import styles from "./RecipeDetails.module.css";
+import Head from "next/head";
 interface Recipe {
   recipeId: number;
   recipeTitle: string;
@@ -23,6 +24,9 @@ const RecipeDetails: React.FC<Props> = ({ details }) => {
 
   return (
     <div className={styles.main}>
+      <Head key={details.recipeId}>
+        <title>{details.recipeTitle}</title>
+      </Head>
       <Link href="/">
         <a className={styles.goBack_btn}>
           <ArrowBackRounded fontSize="inherit" />
